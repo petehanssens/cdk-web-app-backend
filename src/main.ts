@@ -257,6 +257,11 @@ export class CognitoStack extends Stack {
       },
     });
 
+    userPoolClientInputsCustomResource.node.addDependency(UserPoolClientLambda)
+    userPoolClientInputsCustomResource.node.addDependency(userPoolClient)
+    userPoolClientInputsCustomResource.node.addDependency(userPool)
+    userPoolClientInputsCustomResource.node.addDependency(UserPoolClientLambdaLogPolicy)
+
     this.response = userPoolClientInputsCustomResource.getAtt('Response').toString();
 
     // CFN Outputs
@@ -467,7 +472,7 @@ new CognitoStack(app, 'example-cognito-stack', { env: devEnv });
 // new MyStack(app, 'my-stack-prod', { env: prodEnv });
 
 
-new AppSyncStack(app, 'example-appsync-stack', { env: devEnv });
+// new AppSyncStack(app, 'example-appsync-stack', { env: devEnv });
 // new MyStack(app, 'my-stack-prod', { env: prodEnv });
 
 app.synth();

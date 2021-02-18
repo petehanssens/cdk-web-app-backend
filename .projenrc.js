@@ -115,4 +115,8 @@ project.addTask('deploy-all', {
   exec: 'cdk deploy --all',
 });
 
+project.addTask('destroy-all', {
+  exec: 'cdk destroy --all',
+});
+
 project.synth();

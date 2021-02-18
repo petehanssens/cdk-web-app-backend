@@ -208,6 +208,14 @@
           "exec": "cdk deploy --all"
         }
       ]
+    },
+    "destroy-all": {
+      "name": "destroy-all",
+      "steps": [
+        {
+          "exec": "cdk destroy --all"
+        }
+      ]
     }
   },
   "env": {

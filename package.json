@@ -19,7 +19,8 @@
     "deploy": "npx projen deploy",
     "destroy": "npx projen destroy",
     "diff": "npx projen diff",
-    "deploy-all": "npx projen deploy-all"
+    "deploy-all": "npx projen deploy-all",
+    "destroy-all": "npx projen destroy-all"
   },
   "author": {
     "name": "Peter Hanssens",
