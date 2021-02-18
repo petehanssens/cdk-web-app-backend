@@ -1,0 +1,24 @@
+type Mutation {
+  createInitialUser(
+    email: String
+    first_name: String
+    last_name: String
+    mobile: String
+  ): User!
+}
+
+type Query {
+  getUserInfo: User
+}
+
+type User {
+  email: String
+  first_name: String
+  last_name: String
+  mobile: String
+}
+
+schema {
+  query: Query
+  mutation: Mutation
+}
